@@ -11,6 +11,7 @@
       <% end %>
     </div>
   </div>
+<<<<<<< HEAD
   <div class="col s9">
     <div class="chatbox">
       <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
@@ -29,3 +30,17 @@
     </div>
   </div>
 </div>
+=======
+
+  <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
+<% end %>
+
+<nav>
+    <div class="nav-wrapper">
+      <div class="col s12">
+        <a href="/chat_rooms" class="breadcrumb">Homepage</a>
+        <a href="#!" class="breadcrumb"><%= @chat_room.title %></a>
+      </div>
+    </div>
+  </nav>
+>>>>>>> master

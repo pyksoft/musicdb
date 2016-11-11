@@ -7,6 +7,9 @@ class User < ApplicationRecord
   has_many :chat_rooms, dependent: :destroy
   has_many :messages, dependent: :destroy
 
+  has_many :favorites
+  has_many :favorite_artists, through: :favorites, source: :favorited, source_type: 'Artist'
+
 
   def name
     email.split('@')[0]
