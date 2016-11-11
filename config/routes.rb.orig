@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+  resources :profiles
+=======
   resources :genres
+>>>>>>> master
   get 'chat_rooms_controller/index'
 
   devise_for :users
