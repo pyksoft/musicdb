@@ -49,3 +49,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 gem 'slim-rails', '~> 3.1', '>= 3.1.1'
+gem 'redis', '~> 3.2'
