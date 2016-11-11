@@ -3,7 +3,7 @@ class FavoriteArtistsController < ApplicationController
 
   def index
     @artists = current_user.favorite_artists
-    end
+  end
 
   def create
     if Favorite.create(favorited: @artist, user: current_user)
