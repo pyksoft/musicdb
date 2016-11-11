@@ -1,3 +1,7 @@
 h1= @artist.name
 p
   | Bio: #{@artist.bio}
+
+  h4 Photos
+- @artist.artistphotos.each do |photo|
+  = image_tag photo.image
