@@ -1,13 +1,15 @@
 ul#dropdown1.dropdown-content
   li
+    - if current_user
       = current_user.has_profile? ? current_user.full_name : current_user.email
   li
+    if current_user
       = link_to 'My profile', current_user.profile
   li
     a href="#!"  three
 nav
   .nav-wrapper
-    a.brand-logo.center href="#!"  MusicDB
+    a.brand-logo.center href="/"  MusicDB
     ul.right.hide-on-med-and-down
       li
         a href="artists"  Artists
