@@ -14,3 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require cable
+//= require materialize-sprockets
+//= require materialize/extras/nouislider
