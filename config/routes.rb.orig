@@ -1,18 +1,22 @@
 Rails.application.routes.draw do
 <<<<<<< HEAD
+(??)
 =======
   resources :genres
+(??)
   get 'chat_rooms_controller/index'
 
->>>>>>> master
+(??)
   devise_for :users
+(??)
 
   resources :chat_rooms, only: [:new, :create, :show, :index]
+(??)
 
   resources :artists, only: [:show, :index]
 
 
   mount ActionCable.server => '/cable'
 
-  root 'chat_rooms#index'
+(??)
 end

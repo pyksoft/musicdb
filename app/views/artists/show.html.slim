@@ -8,5 +8,16 @@ p
 
   h4 Genres
 - @genres.each do |genre|
-  span
-  = genre.name
+    span.btn
+      = genre.name
+
+
+nav
+  .nav-wrapper
+    .col.s12
+      a.breadcrumb[href="/chat_rooms"]
+        | Homepage
+      a.breadcrumb[href="/artists"]
+        | Artists overview
+      a.breadcrumb[href="#!"]
+        = @artist.name
