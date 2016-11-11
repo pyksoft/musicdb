@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
 //= require cable
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
