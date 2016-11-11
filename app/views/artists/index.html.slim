@@ -1,6 +1,4 @@
-h1 Artists
-- @artists.each do |artist|
-  - artist.artistphotos.each do |photo|
-    .artist-thumbnail
-      = link_to image_tag(photo.image.thumbnail), artist_path(artist.id)
-      p= link_to artist.name, artist_path(artist.id)
+= form_tag artists_path, :method => 'get' do
+  = hidden_field_tag :direction, params[:direction]
+  = hidden_field_tag :sort, params[:sort]
+#artists= render 'artists_list'
