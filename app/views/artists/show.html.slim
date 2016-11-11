@@ -10,3 +10,14 @@ p
 - @genres.each do |genre|
     span.btn
       = genre.name
+
+
+nav
+  .nav-wrapper
+    .col.s12
+      a.breadcrumb[href="/chat_rooms"]
+        | Homepage
+      a.breadcrumb[href="/artists"]
+        | Artists overview
+      a.breadcrumb[href="#!"]
+        = @artist.name
