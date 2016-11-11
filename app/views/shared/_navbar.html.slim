@@ -1,8 +1,8 @@
 ul#dropdown1.dropdown-content
   li
-    a href="#!"  one
+      = current_user.has_profile? ? current_user.full_name : current_user.email
   li
-    a href="#!"  two
+      = link_to 'My profile', current_user.profile
   li
     a href="#!"  three
 nav
@@ -18,3 +18,5 @@ nav
         a.dropdown-button data-activates="dropdown1" href="#!"
           | Dropdown
           i.material-icons.right
+
+  

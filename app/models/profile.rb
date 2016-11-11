@@ -4,6 +4,7 @@ class Profile < ApplicationRecord
   validates :bio, presence: true
 
   belongs_to :user
+  has_many :photos
 
   def full_name
       "#{firstname} #{lastname}"

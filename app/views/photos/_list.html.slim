@@ -1,0 +1,8 @@
+- if @photos
+  - @photos.each do |photo|
+    .panel.panel-default
+      .panel-heading.preview
+        = image_tag photo.image.thumbnail
+      .panel-body
+        span.btn.btn-default
+          | Delete
