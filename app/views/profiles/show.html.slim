@@ -1,11 +1,8 @@
 .row
   .col.s12.m7
     .card
-      .card-image
-        - @profile.photos.each do |photo|
-          = image_tag photo.image
-        span.card-title
-          | Profile photo
+      - @profile.photos.each do |photo|
+        = image_tag photo.image.thumbnail
       .card-content
         p 
           | Lastname: 

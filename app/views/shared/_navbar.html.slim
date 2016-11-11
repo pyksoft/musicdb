@@ -1,12 +1,29 @@
 ul#dropdown1.dropdown-content
   li
-    - if current_user
-      = current_user.has_profile? ? current_user.full_name : current_user.email
-  li
-    if current_user
-      = link_to 'My profile', current_user.profile
-  li
-    a href="#!"  three
+  - if !user_signed_in?
+    li
+      = link_to "Log In", new_user_session_path
+    li
+      = link_to "Sign Up", new_user_registration_path
+  - else
+    li.dropdown
+      a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"]
+        = current_user.has_profile? ? current_user.full_name : current_user.email
+        span.caret
+      ul.dropdown-menu
+        li.divider[role="separator"]
+        - if current_user.has_profile?
+          li
+            = link_to "My Profile", profile_path(current_user.id)
+        - else
+          li
+            = link_to "Create Profile", new_profile_path
+        li
+          = link_to "Edit Password", edit_user_registration_path
+        li.divider[role="separator"]
+        li
+          = link_to "Log out", destroy_user_session_path, method: :delete
+
 nav
   .nav-wrapper
     a.brand-logo.center href="/"  MusicDB
@@ -17,10 +34,11 @@ nav
         a href="badges.html"  Songs
       /! Dropdown Trigger
       li
-        a.dropdown-button data-activates="dropdown1" href="#!"
+        a.dropdown-button data-activates="dropdown1" href="/"
           | Dropdown
           i.material-icons.right
 
     .col.s12
       a.breadcrumb href="/chat_rooms"  Homepage
       a.breadcrumb href="#!"  <%= @chat_room.title %
+          
