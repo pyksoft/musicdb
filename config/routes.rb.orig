@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+=======
   resources :genres
   get 'chat_rooms_controller/index'
 
+>>>>>>> master
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :chat_rooms, only: [:new, :create, :show, :index]
-  root 'chat_rooms#index'
 
   resources :artists, only: [:show, :index]
 
