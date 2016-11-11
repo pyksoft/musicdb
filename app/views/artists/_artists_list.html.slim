@@ -1,0 +1,11 @@
+tr
+  p Sort by:
+  th= sortable "name"
+
+  h1 Artists
+  .collection
+    - @artists.each do |artist|
+      - artist.artistphotos.each do |photo|
+        .artist-thumbnail.collection-item
+          = link_to image_tag(photo.image.thumbnail), artist_path(artist.id)
+          p= link_to artist.name, artist_path(artist.id)
