@@ -1,11 +1,22 @@
-p 
-  | Firstname:
-  =  current_user.profile[:lastname] 
-hr
-p 
-  | Lastname:
-  = current_user.profile[:firstname] 
-hr
-p 
-  | BIO:
-  = current_user.profile[:bio]
+.row
+  .col.s12.m7
+    .card
+      .card-image
+        - @profile.photos.each do |photo|
+          = image_tag photo.image
+        span.card-title
+          | Profile photo
+      .card-content
+        p 
+          | Lastname: 
+          =  current_user.profile[:lastname] 
+        hr
+        p 
+          | Firstname:
+          = current_user.profile[:firstname] 
+        hr
+        p 
+          | BIO:
+          = current_user.profile[:bio]
+      .card-action
+        =link_to 'Edit', edit_profile_path, class: "btn btn-default"
