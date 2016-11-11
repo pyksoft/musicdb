@@ -1,0 +1,11 @@
+p 
+  | Firstname:
+  =  current_user.profile[:lastname] 
+hr
+p 
+  | Lastname:
+  = current_user.profile[:firstname] 
+hr
+p 
+  | BIO:
+  = current_user.profile[:bio]
