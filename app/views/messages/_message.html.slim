@@ -1,14 +1,12 @@
-.card
-  .card-block
-    .row
-      .col-md-1
-        = gravatar_for message.user
-      .col-md-11
-        p.card-text
-          span.text-muted
-            = message.user.name
-            |  at
-            = message.timestamp
-            |  says
-          br
-          = message.body
+.chat-row
+  .chat-column-avatar
+    = gravatar_for message.user
+  .chat-column-content
+    .chat-row-user
+      = message.user.name
+      .timestamp
+        = message.timestamp
+      .seconds
+        = message.seconds
+    .chat-row-content
+      = message.body
