@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   root 'chat_rooms#index'
 
   resources :artists, only: [:show, :index]
-
+  
+  resources :favorite_artists, only: [:create, :destroy, :index]
 
   mount ActionCable.server => '/cable'
 
