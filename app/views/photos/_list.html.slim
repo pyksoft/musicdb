@@ -5,4 +5,7 @@
         = image_tag photo.image.thumbnail
       .panel-body
         span.btn.btn-default
-          | Delete
+          = link_to "Delete", photo_path( photo.id ), class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" }
+
+
+          
