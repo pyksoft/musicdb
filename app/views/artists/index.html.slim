@@ -1,5 +1,6 @@
 h1 Artists
 - @artists.each do |artist|
-  p= link_to artist.name, artist_path(artist.id)
   - artist.artistphotos.each do |photo|
-    = image_tag photo.image.thumbnail
+    .artist-thumbnail
+      = link_to image_tag(photo.image.thumbnail), artist_path(artist.id)
+      p= link_to artist.name, artist_path(artist.id)
