@@ -14,8 +14,6 @@ Rails.application.routes.draw do
   resources :chat_rooms, only: [:new, :create, :show, :index]
   root 'chat_rooms#show', id: (ChatRoom.first.id rescue 1)
 
-
-
   mount ActionCable.server => '/cable'
 
   root 'chat_rooms#index'

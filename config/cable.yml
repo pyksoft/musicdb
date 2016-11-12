@@ -6,4 +6,4 @@ test:
 
 production:
   adapter: redis
-  url: http://musicdb.codaisseur.cloud/
+  url: <%= ENV['REDIS_URL'] %>
