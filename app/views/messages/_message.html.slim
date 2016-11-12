@@ -3,7 +3,7 @@
     = gravatar_for message.user
   .chat-column-content
     .chat-row-user
-      = message.user.name
+      = message.user.profile.firstname
       .timestamp
         = message.timestamp
       .seconds

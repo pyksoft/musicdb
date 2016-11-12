@@ -16,7 +16,7 @@ class Message < ApplicationRecord
   end
 
   def slack(message)
-    if message.include? "@" + user.name
+    if message.include? "@" + user.profile.firstname
       notifier = Slack::Notifier.new "https://hooks.slack.com/services/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"
       notifier.username = "MusicDB (BOT)"
       notifier.ping "You are mentioned: #{message} in *#{chat_room.title}*", icon_url: "https://api.adorable.io/avatars/285/abott@adorable.io.png"

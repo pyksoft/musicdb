@@ -39,3 +39,16 @@ artists = [artist01, artist02, artist03, artist04, artist05, artist06, artist07,
 200.times do
      Song.create(name: Faker::Pokemon.name, artist: artists.sample)
     end
+
+# Chatrooms
+general = ChatRoom.create(title:"#General")
+pop = ChatRoom.create(title:"#Pop")
+rock = ChatRoom.create(title:"#Rock")
+r_n_b = ChatRoom.create(title:"#R&B")
+reggae = ChatRoom.create(title:"#Reggae")
+disco = ChatRoom.create(title:"#Disco")
+blues = ChatRoom.create(title:"#Blues")
+folk = ChatRoom.create(title:"#Folk")
+country = ChatRoom.create(title:"#Country")
+opera = ChatRoom.create(title:"#Opera")
+samPrivate = ChatRoom.create(title:"#SaMpRiVaTe;)")
