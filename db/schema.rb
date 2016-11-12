@@ -115,13 +115,6 @@ ActiveRecord::Schema.define(version: 20161111181005) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  create_table "users_artists", id: false, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "artists_id"
-    t.index ["artists_id"], name: "index_users_artists_on_artists_id", using: :btree
-    t.index ["user_id"], name: "index_users_artists_on_user_id", using: :btree
-  end
-
   add_foreign_key "artistphotos", "artists"
   add_foreign_key "chat_rooms", "users"
   add_foreign_key "favorites", "users"

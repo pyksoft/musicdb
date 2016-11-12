@@ -3,8 +3,10 @@ class Artist < ApplicationRecord
   has_and_belongs_to_many :genres
 
 def self.search(search)
-    where('name ILIKE ?', "%#{search}%")
-  else
-    scoped
+    if search
+      where('name ILIKE :search', search: "%#{search}%")
+    else
+      order(sort_column + ' ' + sort_direction)
+    end
   end
 end
