@@ -1,19 +1,32 @@
 .row
   .col.s12.m7
     .card
-      - @profile.photos.each do |photo|
-        = image_tag photo.image.thumbnail
+      .center
+        - @profile.photos.each do |photo|
+          = image_tag photo.image.thumbnail
+        .card-content
+          p
+            | First name:&nbsp;
+            = current_user.profile[:firstname]
+          p
+            | Last name:&nbsp;
+            =  current_user.profile[:lastname]
+          hr
+          p
+            | Bio:&nbsp;
+            = current_user.profile[:bio]
+        .card-action
+          =link_to 'Edit', edit_profile_path, class: "btn btn-default"
+
+  .col.s12.m7
+    .card
       .card-content
-        p 
-          | Lastname: 
-          =  current_user.profile[:lastname] 
-        hr
-        p 
-          | Firstname:
-          = current_user.profile[:firstname] 
-        hr
-        p 
-          | BIO:
-          = current_user.profile[:bio]
-      .card-action
-        =link_to 'Edit', edit_profile_path, class: "btn btn-default"
+        h5
+          | #{current_user.name}'s Favorite Artists
+
+        .collection
+          - @artists.each do |artist|
+            - artist.artistphotos.each do |photo|
+              .artist-thumbnail.collection-item.material-icons
+                = link_to image_tag(photo.image.thumbnail), artist_path(artist.id)
+                p= link_to artist.name, artist_path(artist.id)

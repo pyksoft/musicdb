@@ -2,10 +2,15 @@ tr
   p Sort by:
   th= sortable "name"
 
+  = form_tag artists_path, :method => 'get' do
+    p
+      = text_field_tag :search, params[:search]
+      = submit_tag "Search", :name => nil
+
   h1 Artists
   .collection
     - @artists.each do |artist|
       - artist.artistphotos.each do |photo|
-        .artist-thumbnail.collection-item
+        .artist-thumbnail.collection-item.material-icons
           = link_to image_tag(photo.image.thumbnail), artist_path(artist.id)
           p= link_to artist.name, artist_path(artist.id)

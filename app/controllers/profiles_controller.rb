@@ -20,12 +20,13 @@ class ProfilesController < ApplicationController
   end
 
   def edit
-    @photos = @profile.photos
+
   end
 
   def show
     @profile = current_user.profile
     @photos = @profile.photos
+    @artists = current_user.favorite_artists
   end
 
   def update

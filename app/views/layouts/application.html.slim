@@ -9,8 +9,7 @@ html
   body
     = render "shared/navbar"
 
-    p.notice = notice
-    p.alert = alert
-
     .container
+      p.notice = notice
+      p.alert = alert
       = yield
