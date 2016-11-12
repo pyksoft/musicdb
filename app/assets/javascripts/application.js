@@ -16,6 +16,3 @@
 //= require cable
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
-( document ).ready(function){
-(".dropdown-button").dropdown();
-}
