@@ -4,20 +4,24 @@
       = msg
   .form-group
     label
-      | First Name
+      | First Name*
     = f.text_field :firstname, placeholder: "First Name", class: "form-control"
   .form-group
     label
-      | Last Name
+      | Last Name*
     = f.text_field :lastname, placeholder: "Last Name", class: "form-control"
   .form-group
     label
-      | Some bio
-    = f.text_field :bio, placeholder: "BIO:", class: "form-control"
+      | Bio
+    = f.text_field :bio, placeholder: "Write something about yourself!", class: "form-control"
   .form-group
     .btn-default
-      = file_field_tag "images[]", type: :file, multiple: true
+      | Upload your avatar!
+    br
+    br
+    = file_field_tag "images[]", type: :file, multiple: true
   = render 'photos/list'
+
   br
   br
   .actions

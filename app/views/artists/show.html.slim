@@ -1,12 +1,14 @@
 
-
-- unless current_user.favorite_artists.exists?(id: @artist.id)
-  = link_to 'Add to favorites', favorite_artists_path(artist_id: @artist), method: :post
-- else
-  = link_to 'Remove from favorites', favorite_artist_path(@artist), method: :delete
-
 h5
   = @artist.name
+
+
+
+- unless current_user.favorite_artists.exists?(id: @artist.id)
+  = link_to 'Add to favorites', favorite_artists_path(artist_id: @artist), method: :post, class: "btn btn-default"
+- else
+  = link_to 'Remove from favorites', favorite_artist_path(@artist), method: :delete, class: "btn btn-default"
+
 
 p
   | Bio: #{@artist.bio}
