@@ -7,7 +7,12 @@ ul#dropdown1.dropdown-content
   - else
 
     li.dropdown
+<<<<<<< HEAD
       a.dropdown-toggle[data-toggle="dropdown1" role="button" aria-haspopup="true" aria-expanded="false"]
+        = current_user.has_profile? ? current_user.full_name : current_user.email
+=======
+      a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"]
+>>>>>>> master
         span.caret
       ul.dropdown-menu
         li.divider[role="separator"]
@@ -32,11 +37,16 @@ nav
       li
         a href="/artists"  Artists
       li
-        a href="/genres"  Genres
-      
+        a href="badges.html"  Songs
       /! Dropdown Trigger
       li
+<<<<<<< HEAD
         a.dropdown-button data-activates="dropdown1" href="#!"
           | Setting
-          i.material-icons.right
+          i.material-icons.right 
              arrow_drop_down
+=======
+        a.dropdown-button data-activates="dropdown1"
+          | Settings
+          i.material-icons.right
+>>>>>>> master
