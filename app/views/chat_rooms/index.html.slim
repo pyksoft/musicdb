@@ -1,8 +1,11 @@
-h5 Chatrooms
 
-ul
-  = render @chat_rooms
+h4
+  | Welcome, #{current_user.name}!
+
+p
+  | Recommended for you
 
 p.lead
   = link_to 'New chat room', new_chat_room_path, class: 'btn btn-primary'
-  
+ul
+  = render @chat_rooms
