@@ -2,13 +2,8 @@ class ArtistsController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def index
-    if params[:search]
-      @artists = Artist.search(params[:search]) unless params[:search].blank?
-    elsif sort_direction
-      @artists = Artist.order(sort_column + ' ' + sort_direction)
-    else
-      @artists = Artist.all
-    end
+    @artists = Artist.all
+    @artists = Artist.order(sort_column + ' ' + sort_direction)
   end
 
   def show
