@@ -7,13 +7,12 @@ ul#dropdown1.dropdown-content
   - else
 
     li.dropdown
-      a.dropdown-toggle[data-toggle="dropdown1" role="button" aria-haspopup="true" aria-expanded="false"]
 <<<<<<< HEAD
-        = current_user.has_profile? ? current_user.profile.full_name : current_user.email
+      a.dropdown-toggle[data-toggle="dropdown1" role="button" aria-haspopup="true" aria-expanded="false"]
+        = current_user.has_profile? ? current_user.full_name : current_user.email
 =======
-        - if current_user
-          = current_user.profile.full_name
->>>>>>> 4fd8e0b585600ca4ce44d309fa2cd38b95f54e69
+      a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"]
+>>>>>>> master
         span.caret
       ul.dropdown-menu
         li.divider[role="separator"]
@@ -29,7 +28,7 @@ ul#dropdown1.dropdown-content
         li
           = link_to "Log out", destroy_user_session_path, method: :delete
 
-          
+
 
 nav
   .nav-wrapper
@@ -41,7 +40,13 @@ nav
         a href="badges.html"  Songs
       /! Dropdown Trigger
       li
+<<<<<<< HEAD
         a.dropdown-button data-activates="dropdown1" href="#!"
           | Setting
           i.material-icons.right 
              arrow_drop_down
+=======
+        a.dropdown-button data-activates="dropdown1"
+          | Settings
+          i.material-icons.right
+>>>>>>> master
