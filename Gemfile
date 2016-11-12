@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+source 'https://rubygems.org'
+
+ruby '2.2.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
@@ -58,3 +61,4 @@ gem 'faker', '1.6.6'
 
 gem 'tele_notify', '~> 0.1.1'
 gem 'slack-notifier'
+gem 'rails_12factor', group: :production
