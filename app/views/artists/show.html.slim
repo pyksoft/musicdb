@@ -1,12 +1,4 @@
-nav
- .nav-wrapper
-   .col.s12
-     a.breadcrumb[href="/chat_rooms"]
-       | Homepage
-     a.breadcrumb[href="/artists"]
-       | Artists overview
-     a.breadcrumb[href="#!"]
-       = @artist.name
+
 
 - unless current_user.favorite_artists.exists?(id: @artist.id)
   = link_to 'Add to favorites', favorite_artists_path(artist_id: @artist), method: :post
@@ -27,3 +19,14 @@ h5 Genres
 - @genres.each do |genre|
     span.btn
       = link_to genre.name, genre_path(genre.id)
+
+
+table
+  thead
+    tr
+      td
+        strong Songnames:
+  - @artist.songs.each do |song|
+    tr
+      td
+        = song.name
