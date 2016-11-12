@@ -15,6 +15,4 @@ Rails.application.routes.draw do
   root 'chat_rooms#show', id: (ChatRoom.first.id rescue 1)
 
   mount ActionCable.server => '/cable'
-
-  root 'chat_rooms#index'
 end
