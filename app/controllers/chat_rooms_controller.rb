@@ -21,7 +21,6 @@ class ChatRoomsController < ApplicationController
     @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
     @chat_rooms = ChatRoom.all
     @message = Message.new
-    @messages = Message.all
   end
 
   private
