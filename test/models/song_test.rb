@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GenresControllerTest < ActionDispatch::IntegrationTest
+class SongTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
