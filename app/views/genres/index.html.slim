@@ -1,0 +1,5 @@
+h1 Browse all genres
+.collection
+  - @genres.each do |genre|
+    span.btn
+      = link_to genre.name, genre_path(genre.id)
