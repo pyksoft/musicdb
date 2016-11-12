@@ -1,4 +1,12 @@
-
+nav
+ .nav-wrapper
+   .col.s12
+     a.breadcrumb[href="/chat_rooms"]
+       | Homepage
+     a.breadcrumb[href="/artists"]
+       | Artists overview
+     a.breadcrumb[href="#!"]
+       = @artist.name
 
 - unless current_user.favorite_artists.exists?(id: @artist.id)
   = link_to 'Add to favorites', favorite_artists_path(artist_id: @artist), method: :post
