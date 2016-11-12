@@ -9,11 +9,11 @@ ul#dropdown1.dropdown-content
     li.dropdown
       a.dropdown-toggle[data-toggle="dropdown1" role="button" aria-haspopup="true" aria-expanded="false"]
 <<<<<<< HEAD
+        span.caret
+=======
          if current_user
           = current_user.profile.full_name
             span.caret
-=======
-        span.caret
 >>>>>>> master
       ul.dropdown-menu
         li.divider[role="separator"]
