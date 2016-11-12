@@ -73,6 +73,10 @@
     }
   }
 }
+
+.webhook-message {
+  display:none;
+}
 @media screen and (max-width: 550px) {
   .chat-column-avatar {
     display:none;
