@@ -8,7 +8,9 @@ ul#dropdown1.dropdown-content
 
     li.dropdown
       a.dropdown-toggle[data-toggle="dropdown1" role="button" aria-haspopup="true" aria-expanded="false"]
-        span.caret
+         if current_user
+          = current_user.profile.full_name
+            span.caret
       ul.dropdown-menu
         li.divider[role="separator"]
         - if current_user.has_profile?
@@ -31,8 +33,6 @@ nav
     ul.right.hide-on-med-and-down
       li
         a href="/artists"  Artists
-      li
-        a href="badges.html"  Songs
       /! Dropdown Trigger
       li
         a.dropdown-button data-activates="dropdown1" href="#!"
