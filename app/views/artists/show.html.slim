@@ -1,23 +1,22 @@
-h1= @artist.name
+
+
+- unless current_user.favorite_artists.exists?(id: @artist.id)
+  = link_to 'Add to favorites', favorite_artists_path(artist_id: @artist), method: :post
+- else
+  = link_to 'Remove from favorites', favorite_artist_path(@artist), method: :delete
+
+
+h5
+  = @artist.name
+
 p
   | Bio: #{@artist.bio}
 
-  h4 Photos
+h5 Photos
 - @artist.artistphotos.each do |photo|
   = image_tag photo.image
 
-  h4 Genres
+h5 Genres
 - @genres.each do |genre|
     span.btn
-      = genre.name
-
-
-nav
-  .nav-wrapper
-    .col.s12
-      a.breadcrumb[href="/chat_rooms"]
-        | Homepage
-      a.breadcrumb[href="/artists"]
-        | Artists overview
-      a.breadcrumb[href="#!"]
-        = @artist.name
+      = link_to genre.name, genre_path(genre.id)

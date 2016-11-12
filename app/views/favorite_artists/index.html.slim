@@ -1,0 +1,4 @@
+h1 Artists
+.collection
+  - @artists.each do |artist|
+    p= link_to artist.name, artist_path(artist.id)

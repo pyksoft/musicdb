@@ -1,5 +1,13 @@
 ul#dropdown1.dropdown-content
   li
+<<<<<<< HEAD
+    a href="#!"  one
+  li
+    a href="#!"  two
+  li
+    a href="#!"  three
+
+=======
   - if !user_signed_in?
     li
       = link_to "Log In", new_user_session_path
@@ -24,8 +32,7 @@ ul#dropdown1.dropdown-content
         li.divider[role="separator"]
         li
           = link_to "Log out", destroy_user_session_path, method: :delete
-
-
+>>>>>>> master
 
 nav
   .nav-wrapper
