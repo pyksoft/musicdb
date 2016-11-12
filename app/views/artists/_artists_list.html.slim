@@ -2,6 +2,11 @@ tr
   p Sort by:
   th= sortable "name"
 
+  = form_tag artists_path, :method => 'get' do
+    p
+      = text_field_tag :search, params[:search]
+      = submit_tag "Search", :name => nil
+
   h1 Artists
   .collection
     - @artists.each do |artist|

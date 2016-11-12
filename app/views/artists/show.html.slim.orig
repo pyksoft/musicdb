@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 h5
   = @artist.name
 
+
+=======
 nav
  .nav-wrapper
    .col.s12
@@ -11,6 +14,7 @@ nav
        | Artists overview
      a.breadcrumb[href="#!"]
        = @artist.name
+>>>>>>> master
 
 - unless current_user.favorite_artists.exists?(id: @artist.id)
   = link_to 'Add to favorites', favorite_artists_path(artist_id: @artist), method: :post, class: "btn btn-default"
