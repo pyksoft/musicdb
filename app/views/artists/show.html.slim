@@ -29,3 +29,14 @@ h5 Genres
 - @genres.each do |genre|
     span.btn
       = link_to genre.name, genre_path(genre.id)
+
+
+table
+  thead
+    tr
+      td
+        strong Songnames:
+  - @artist.songs.each do |song|
+    tr
+      td
+        = song.name

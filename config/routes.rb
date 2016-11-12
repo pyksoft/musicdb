@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :profiles
   resources :photos
+  resources :songs
   resources :genres
   resources :artists, only: [:show, :index]
   resources :favorite_artists, only: [:create, :destroy, :index]

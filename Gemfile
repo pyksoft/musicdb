@@ -54,5 +54,6 @@ gem 'redis', '~> 3.2'
 
 gem 'carrierwave'
 gem 'cloudinary'
+gem 'faker', '1.6.6'  
 
 gem 'tele_notify', '~> 0.1.1'

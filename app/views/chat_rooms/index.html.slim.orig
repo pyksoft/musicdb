@@ -5,4 +5,9 @@ ul
 
 p.lead
   = link_to 'New chat room', new_chat_room_path, class: 'btn btn-primary'
+<<<<<<< HEAD
+ul
+  = render @chat_rooms
   
+=======
+>>>>>>> master

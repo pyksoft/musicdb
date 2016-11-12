@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161111181005) do
+ActiveRecord::Schema.define(version: 20161112112356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,6 +89,14 @@ ActiveRecord::Schema.define(version: 20161111181005) do
     t.index ["user_id"], name: "index_profiles_on_user_id", using: :btree
   end
 
+  create_table "songs", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "artist_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_songs_on_artist_id", using: :btree
+  end
+
   create_table "telegram_users", force: :cascade do |t|
     t.integer  "telegram_id"
     t.string   "first_name"
@@ -122,4 +130,5 @@ ActiveRecord::Schema.define(version: 20161111181005) do
   add_foreign_key "messages", "users"
   add_foreign_key "photos", "profiles"
   add_foreign_key "profiles", "users"
+  add_foreign_key "songs", "artists"
 end

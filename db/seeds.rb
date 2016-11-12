@@ -33,3 +33,9 @@ artist06 = Artist.create( { name: "Queen", bio: "Steve walks warily down the str
 artist07 = Artist.create( { name: "Rolling Stones", bio: "Button your coat. Thank you for your wine, California,. I walk the streets of love and they're full of tears. This coming and going. No colours anymore, I want them to turn black. Stay on the path. While lovers laugh and music plays. A couple watch me from a bar", genres: [blues, rock], artistphotos: [artistphoto07] } )
 artist08 = Artist.create( { name: "Leonard Cohen", bio: "Now the swan it floated on the English river. I even heard you say. I tidied up the kitchenette, I tuned the old banjo. I've seen you change the water into wine. I? m wanted at the traffic-jam, they? re saving me a seat. I never thought we? d meet. I've seen you change it back to water, too. I told my mother, Mother, I must leave you. (1409607566242). You kiss my lips and then it? s done. I try but I just don't get by with you. The ending got so ugly. You never ever loved me. It was half my fault and half the atmosphere", genres: [folk, rock], artistphotos: [artistphoto08] } )
 artist09 = Artist.create( { name: "Bob Dylan", bio: "Oh, me and my cousin, one Arthur McBride,. She sewed my new blue jeans.. the Sergeant he cried.. Alberta what's on your mind. I saw them all. Why do I sigh. My sweetheart was a gambler,. Now the only thing a gambler needs. Why don't I try to forget. How many roads must a man walk down. I'll give you more gold. In the finest of clothing he's constantly seen.. And the same to you, gentlemen, we did reply.", genres: [blues, rock, country, folk], artistphotos: [artistphoto09] } )
+
+artists = [artist01, artist02, artist03, artist04, artist05, artist06, artist07, artist08, artist09]
+
+200.times do
+     Song.create(name: Faker::Pokemon.name, artist: artists.sample)
+    end
