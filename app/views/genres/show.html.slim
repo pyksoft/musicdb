@@ -2,7 +2,10 @@ h4
   = @genre.name
 
 p Check out more artists that fit this genre:
-- @genre.artists.each do |artist|
 
-  li
-    = link_to artist.name, artist_path(artist.id)
+.collection
+  - @genre.artists.each do |artist|
+    - artist.artistphotos.each do |photo|
+      .artist-thumbnail.collection-item.material-icons
+        = link_to image_tag(photo.image.thumbnail), artist_path(artist.id)
+        p= link_to artist.name, artist_path(artist.id)
