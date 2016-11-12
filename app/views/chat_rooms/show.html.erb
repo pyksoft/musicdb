@@ -37,4 +37,7 @@
       <% end %>
     </div>
   </div>
+  <div>
+    <%= link_to "Delete Chat", @chat_room.destroy, data: { confirm: "Are you sure?" } %>
+  </div>
 </div>
