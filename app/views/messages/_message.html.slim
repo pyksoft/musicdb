@@ -10,3 +10,5 @@
         = message.seconds
     .chat-row-content
       = message.body
+.webhook-message
+  = message.slack(message.body)
