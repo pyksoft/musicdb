@@ -22,7 +22,7 @@ To use this project
 ![alt tag](http://res.cloudinary.com/sebastiaanpoppen/image/upload/v1480344721/Screen_Shot_2016-11-28_at_15.51.24_jatzwo.png  )
 
 
-## How to make it work
+## Want to contribute?
 The project is currently under construction. Feel free to contribute and make a pull-requests!
 
 Current backlog:
