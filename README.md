@@ -35,8 +35,10 @@ Current backlog:
 * Filtering by Genre
 * Recommendations
 
-
-
 ### Resources used to make this:
 
  * [ActionCable](https://www.sitepoint.com/create-a-chat-app-with-rails-5-actioncable-and-devise/)
+ 
+### Contributors
+ @adrianabm, @Namoneo, @Sebastiaanpoppen, @tanjahennis, @UniqueN
+
